@@ -297,7 +297,7 @@ export function SqlGenerator() {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <Card className="reveal overflow-hidden border-white/75 bg-[linear-gradient(135deg,rgba(255,255,255,0.96)_0%,rgba(244,248,245,0.92)_100%)]">
+      <Card className="reveal overflow-hidden border-[var(--app-border)] bg-[linear-gradient(135deg,rgba(34,41,56,0.96)_0%,rgba(26,31,44,0.98)_100%)]">
         <CardContent className="p-5 sm:p-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="space-y-3">

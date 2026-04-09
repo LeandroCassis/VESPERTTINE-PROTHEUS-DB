@@ -151,7 +151,7 @@ export function Relationships() {
   return (
     <div className="space-y-6">
       <section className="grid gap-5 xl:grid-cols-[minmax(0,1.2fr)_360px]">
-        <Card className="reveal overflow-hidden border-white/75 bg-[linear-gradient(135deg,rgba(255,255,255,0.96)_0%,rgba(245,249,245,0.92)_100%)]">
+        <Card className="reveal overflow-hidden border-[var(--app-border)] bg-[linear-gradient(135deg,rgba(34,41,56,0.96)_0%,rgba(26,31,44,0.98)_100%)]">
           <CardContent className="p-6 sm:p-8">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="teal">Mapa relacional</Badge>

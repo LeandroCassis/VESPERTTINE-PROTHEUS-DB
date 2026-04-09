@@ -115,7 +115,7 @@ export function TableExplorer() {
   return (
     <div className="space-y-6">
       <section className="grid gap-5 xl:grid-cols-[minmax(0,1.36fr)_360px]">
-        <Card className="reveal overflow-hidden border-white/75 bg-[linear-gradient(135deg,rgba(255,255,255,0.96)_0%,rgba(245,249,245,0.92)_56%,rgba(241,248,244,0.9)_100%)]">
+        <Card className="reveal overflow-hidden border-[var(--app-border)] bg-[linear-gradient(135deg,rgba(34,41,56,0.96)_0%,rgba(26,31,44,0.98)_58%,rgba(21,26,37,0.96)_100%)]">
           <CardContent className="p-6 sm:p-8">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="teal">VESPERTTINE DB-PROTHEUS</Badge>
@@ -124,12 +124,11 @@ export function TableExplorer() {
             </div>
 
             <div className="mt-6 max-w-3xl">
-              <h1 className="text-4xl font-semibold tracking-[-0.06em] text-[var(--app-ink)] sm:text-5xl">
-                Servico de apoio para informacoes do banco de dados Protheus.
+              <h1 className="bg-gradient-to-r from-[var(--app-primary)] to-[var(--app-secondary)] bg-clip-text text-5xl font-bold tracking-[-0.06em] text-transparent sm:text-6xl lg:text-7xl">
+                Vesperttine
               </h1>
               <p className="mt-4 max-w-2xl text-[15px] leading-7 text-[var(--app-muted)] sm:text-base">
-                O VESPERTTINE DB-PROTHEUS centraliza tabelas, campos, relacionamentos e geracao de SQL para apoiar
-                consultas tecnicas e operacionais sobre a base Protheus com navegacao direta e busca imediata.
+                Aplicativo de ducumentação e consultas documentais do banco de dados PROTHEUS
               </p>
             </div>
 
@@ -198,7 +197,7 @@ export function TableExplorer() {
                   className={`rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] transition ${
                     selectedPrefix === prefix
                       ? 'border-transparent bg-[rgba(31,122,89,0.12)] text-[var(--app-primary-strong)]'
-                      : 'border-[var(--app-border)] bg-white/80 text-[var(--app-muted-strong)] hover:bg-white'
+                      : 'border-[var(--app-border)] bg-[rgba(64,62,67,0.72)] text-[var(--app-muted-strong)] hover:bg-[var(--app-panel)]'
                   }`}
                 >
                   {prefix} <span className="text-[var(--app-muted)]">{count}</span>
@@ -221,7 +220,7 @@ export function TableExplorer() {
               <Link
                 key={table.id}
                 to={`/tabela/${table.id}`}
-                className="flex items-start gap-3 rounded-[22px] border border-[rgba(19,40,34,0.06)] bg-[rgba(19,40,34,0.03)] px-4 py-4 transition hover:border-[rgba(31,122,89,0.16)] hover:bg-white"
+                className="flex items-start gap-3 rounded-[22px] border border-[rgba(19,40,34,0.06)] bg-[rgba(19,40,34,0.03)] px-4 py-4 transition hover:border-[rgba(31,122,89,0.16)] hover:bg-[var(--app-panel)]"
               >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[18px] bg-[rgba(31,122,89,0.08)] text-[var(--app-primary)]">
                   <Database className="h-4 w-4" />
@@ -269,7 +268,7 @@ export function TableExplorer() {
                   className={`rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] transition ${
                     selectedPrefix === null
                       ? 'border-transparent bg-[rgba(31,122,89,0.12)] text-[var(--app-primary-strong)]'
-                      : 'border-[var(--app-border)] bg-white/80 text-[var(--app-muted-strong)] hover:bg-white'
+                      : 'border-[var(--app-border)] bg-[rgba(64,62,67,0.72)] text-[var(--app-muted-strong)] hover:bg-[var(--app-panel)]'
                   }`}
                 >
                   Todas
@@ -282,7 +281,7 @@ export function TableExplorer() {
                     className={`rounded-full border px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] transition ${
                       selectedPrefix === prefix
                         ? 'border-transparent bg-[rgba(31,122,89,0.12)] text-[var(--app-primary-strong)]'
-                        : 'border-[var(--app-border)] bg-white/80 text-[var(--app-muted-strong)] hover:bg-white'
+                        : 'border-[var(--app-border)] bg-[rgba(64,62,67,0.72)] text-[var(--app-muted-strong)] hover:bg-[var(--app-panel)]'
                     }`}
                   >
                     {prefix} <span className="text-[var(--app-muted)]">{count}</span>
@@ -313,7 +312,7 @@ export function TableExplorer() {
               </div>
               <div className="mt-4 space-y-2">
                 {datasetStats.families.slice(0, 5).map(([prefix, count]) => (
-                  <div key={prefix} className="flex items-center justify-between rounded-full bg-white px-3 py-2 shadow-[var(--app-shadow-soft)]">
+                  <div key={prefix} className="flex items-center justify-between rounded-full border border-[var(--app-border)] bg-[var(--app-panel)] px-3 py-2 shadow-[var(--app-shadow-soft)]">
                     <span className="text-sm font-semibold text-[var(--app-ink)]">{prefix}</span>
                     <span className="text-sm text-[var(--app-muted)]">{count} tabelas</span>
                   </div>
@@ -336,7 +335,7 @@ export function TableExplorer() {
               </p>
             </div>
 
-            <div className="rounded-full border border-white/70 bg-white/86 px-4 py-2 text-sm text-[var(--app-muted-strong)] shadow-[var(--app-shadow-soft)]">
+            <div className="rounded-full border border-[var(--app-border)] bg-[var(--app-panel)] px-4 py-2 text-sm text-[var(--app-muted-strong)] shadow-[var(--app-shadow-soft)]">
               Pagina {page + 1} de {pageCount}
             </div>
           </div>
@@ -366,7 +365,7 @@ export function TableExplorer() {
               <Button type="button" variant="secondary" size="sm" onClick={() => setPage((current) => Math.max(0, current - 1))} disabled={page === 0}>
                 Anterior
               </Button>
-              <div className="rounded-full border border-white/70 bg-white/86 px-4 py-2 text-sm text-[var(--app-muted-strong)] shadow-[var(--app-shadow-soft)]">
+              <div className="rounded-full border border-[var(--app-border)] bg-[var(--app-panel)] px-4 py-2 text-sm text-[var(--app-muted-strong)] shadow-[var(--app-shadow-soft)]">
                 {page + 1} / {pageCount}
               </div>
               <Button

@@ -2,20 +2,21 @@
 @import "tailwindcss";
 
 :root {
-  --app-background: #f6f7f2;
-  --app-surface: #ffffff;
-  --app-surface-soft: rgba(255, 255, 255, 0.82);
-  --app-panel: #eef3ee;
-  --app-ink: #132822;
-  --app-muted: #6d837c;
-  --app-muted-strong: #425c54;
-  --app-border: rgba(19, 40, 34, 0.08);
-  --app-primary: #1f7a59;
-  --app-primary-strong: #19694d;
-  --app-primary-soft: rgba(31, 122, 89, 0.1);
-  --app-accent: #f0d9ab;
-  --app-shadow: 0 22px 55px -35px rgba(15, 23, 42, 0.35);
-  --app-shadow-soft: 0 16px 38px -28px rgba(15, 23, 42, 0.2);
+  --app-background: #1a1f2c;
+  --app-surface: #222938;
+  --app-surface-soft: rgba(34, 41, 56, 0.84);
+  --app-panel: #2b3344;
+  --app-ink: #ffffff;
+  --app-muted: #9aa7be;
+  --app-muted-strong: #d9e2f2;
+  --app-border: rgba(30, 174, 219, 0.18);
+  --app-primary: #00d084;
+  --app-primary-strong: #00b879;
+  --app-primary-soft: rgba(0, 208, 132, 0.14);
+  --app-secondary: #1eaedb;
+  --app-accent: #403e43;
+  --app-shadow: 0 24px 60px -34px rgba(0, 0, 0, 0.55);
+  --app-shadow-soft: 0 18px 42px -28px rgba(0, 0, 0, 0.42);
   --app-radius-xxl: 12px;
   --app-radius-xl: 10px;
   --app-radius-lg: 8px;
@@ -43,9 +44,9 @@ body {
   color: var(--app-ink);
   font-family: 'Manrope', 'Segoe UI Variable Text', 'Segoe UI', sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(183, 221, 203, 0.44), transparent 26%),
-    radial-gradient(circle at top right, rgba(248, 224, 183, 0.38), transparent 22%),
-    linear-gradient(180deg, #fcfcf8 0%, var(--app-background) 100%);
+    radial-gradient(circle at top left, rgba(0, 208, 132, 0.18), transparent 28%),
+    radial-gradient(circle at top right, rgba(30, 174, 219, 0.2), transparent 24%),
+    linear-gradient(180deg, #131722 0%, var(--app-background) 58%, #151a25 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -63,8 +64,8 @@ a {
 }
 
 ::selection {
-  background: rgba(31, 122, 89, 0.18);
-  color: var(--app-ink);
+  background: rgba(30, 174, 219, 0.28);
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -77,15 +78,40 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(102, 128, 118, 0.32);
+  background: rgba(30, 174, 219, 0.3);
   border: 2px solid transparent;
   border-radius: 999px;
   background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(80, 103, 95, 0.48);
+  background: rgba(0, 208, 132, 0.42);
   background-clip: content-box;
+}
+
+[class*='bg-white/92'],
+[class*='bg-white/90'],
+[class*='bg-white/88'],
+[class*='bg-white/82'],
+[class*='bg-white/78'],
+[class*='bg-white/75'] {
+  background-color: rgba(34, 41, 56, 0.88) !important;
+}
+
+[class*='border-white/60'],
+[class*='border-white/70'],
+[class*='border-white/75'],
+[class*='border-white/80'] {
+  border-color: rgba(30, 174, 219, 0.18) !important;
+}
+
+[class*='bg-[rgba(19,40,34,0.03)]'] {
+  background-color: rgba(64, 62, 67, 0.42) !important;
+}
+
+[class*='border-[rgba(19,40,34,0.06)]'],
+[class*='border-[rgba(19,40,34,0.08)]'] {
+  border-color: rgba(30, 174, 219, 0.14) !important;
 }
 
 [class*='rounded-[28px]'] {

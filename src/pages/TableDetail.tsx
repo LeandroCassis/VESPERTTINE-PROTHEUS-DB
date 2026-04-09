@@ -158,7 +158,7 @@ export function TableDetail() {
   return (
     <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_340px] xl:items-start">
       <div className="space-y-6">
-        <Card className="reveal overflow-hidden border-white/75 bg-[linear-gradient(135deg,rgba(255,255,255,0.96)_0%,rgba(244,248,245,0.92)_100%)]">
+        <Card className="reveal overflow-hidden border-[var(--app-border)] bg-[linear-gradient(135deg,rgba(34,41,56,0.96)_0%,rgba(26,31,44,0.98)_100%)]">
           <CardContent className="p-5 sm:p-6">
             <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
               <div className="min-w-0 flex-1 space-y-4">
@@ -444,7 +444,10 @@ export function TableDetail() {
                   const targetId = extractTableId(relationship['tabela destino']);
 
                   return (
-                    <div key={`${relationship['tabela destino']}-${index}`} className="rounded-[18px] bg-white px-3 py-3 shadow-[var(--app-shadow-soft)]">
+                    <div
+                      key={`${relationship['tabela destino']}-${index}`}
+                      className="rounded-[18px] border border-[var(--app-border)] bg-[var(--app-panel)] px-3 py-3 shadow-[var(--app-shadow-soft)]"
+                    >
                       <p className="text-sm font-semibold text-[var(--app-ink)]">{relationship.relacionamento || 'Relacao'}</p>
                       <p className="mt-1 text-sm leading-6 text-[var(--app-muted)]">{relationship['tabela destino']}</p>
                       {targetId ? (

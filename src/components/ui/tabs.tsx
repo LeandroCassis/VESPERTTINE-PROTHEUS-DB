@@ -8,7 +8,7 @@ export function TabsList({ className, ...props }: ComponentPropsWithoutRef<typeo
   return (
     <TabsPrimitive.List
       className={cn(
-        'inline-flex w-full flex-wrap items-center gap-1 rounded-[20px] border border-white/70 bg-white/78 p-1 shadow-[var(--app-shadow-soft)] lg:w-auto',
+        'inline-flex w-full flex-wrap items-center gap-1 rounded-[20px] border border-[var(--app-border)] bg-[var(--app-surface-soft)] p-1 shadow-[var(--app-shadow-soft)] lg:w-auto',
         className,
       )}
       {...props}
@@ -21,7 +21,7 @@ export function TabsTrigger({ className, ...props }: ComponentPropsWithoutRef<ty
     <TabsPrimitive.Trigger
       className={cn(
         'inline-flex min-h-10 flex-1 items-center justify-center rounded-[16px] px-4 py-2 text-sm font-semibold text-[var(--app-muted)] transition lg:flex-none',
-        'hover:text-[var(--app-ink)] data-[state=active]:bg-[rgba(31,122,89,0.08)] data-[state=active]:text-[var(--app-primary-strong)]',
+        'hover:text-[var(--app-ink)] data-[state=active]:bg-[rgba(30,174,219,0.12)] data-[state=active]:text-[var(--app-primary)]',
         className,
       )}
       {...props}

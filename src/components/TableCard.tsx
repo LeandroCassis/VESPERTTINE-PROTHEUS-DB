@@ -12,7 +12,7 @@ interface TableCardProps {
 
 export function TableCard({ table }: TableCardProps) {
   return (
-    <Card className="group h-full overflow-hidden border-white/75 bg-white/92 transition duration-300 hover:-translate-y-1 hover:border-[rgba(31,122,89,0.14)] hover:shadow-[0_28px_60px_-34px_rgba(15,23,42,0.32)]">
+    <Card className="group h-full overflow-hidden border-[var(--app-border)] bg-[var(--app-surface-soft)] transition duration-300 hover:-translate-y-1 hover:border-[rgba(30,174,219,0.24)] hover:shadow-[0_28px_60px_-34px_rgba(0,0,0,0.42)]">
       <CardContent className="flex h-full flex-col p-5">
         <div className="flex items-start justify-between gap-4">
           <div className="min-w-0 space-y-3">
@@ -23,7 +23,7 @@ export function TableCard({ table }: TableCardProps) {
 
             <div>
               <div className="flex items-start gap-3">
-                <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-[18px] border border-[var(--app-border)] bg-[rgba(31,122,89,0.06)] text-[var(--app-primary)]">
+                <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-[18px] border border-[var(--app-border)] bg-[rgba(30,174,219,0.12)] text-[var(--app-primary)]">
                   <Database className="h-4 w-4" />
                 </div>
                 <div className="min-w-0">

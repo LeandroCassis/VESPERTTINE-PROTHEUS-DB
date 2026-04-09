@@ -102,12 +102,12 @@ export function RelationshipGraph({ table, allTables }: RelationshipGraphProps) 
   return (
     <div
       ref={containerRef}
-      className="overflow-hidden rounded-[24px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.92)_0%,rgba(245,248,244,0.96)_100%)] p-4 shadow-[var(--app-shadow-soft)]"
+      className="overflow-hidden rounded-[24px] border border-[var(--app-border)] bg-[linear-gradient(180deg,rgba(34,41,56,0.94)_0%,rgba(26,31,44,0.98)_100%)] p-4 shadow-[var(--app-shadow-soft)]"
     >
       <svg viewBox={`0 0 ${dimensions.width} ${dimensions.height}`} className="w-full" style={{ minHeight: 420 }}>
         <defs>
           <marker id="graph-arrow" markerWidth="10" markerHeight="8" refX="10" refY="4" orient="auto">
-            <path d="M0,0 L10,4 L0,8" fill="rgba(66,92,84,0.55)" />
+            <path d="M0,0 L10,4 L0,8" fill="rgba(30,174,219,0.6)" />
           </marker>
         </defs>
 

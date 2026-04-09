@@ -17,13 +17,13 @@ export function SearchInput({ value, onChange, placeholder = 'Pesquisar...', cla
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        className="h-12 rounded-[20px] border-white/70 bg-white/90 pl-11 pr-11"
+        className="h-12 rounded-[20px] border-[var(--app-border)] bg-[var(--app-surface-soft)] pl-11 pr-11"
       />
       {value ? (
         <button
           type="button"
           onClick={() => onChange('')}
-          className="absolute top-1/2 right-3 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-[var(--app-muted)] transition hover:bg-[rgba(19,40,34,0.05)] hover:text-[var(--app-ink)]"
+          className="absolute top-1/2 right-3 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-[var(--app-muted)] transition hover:bg-[rgba(30,174,219,0.12)] hover:text-[var(--app-ink)]"
           aria-label="Limpar busca"
         >
           <X className="h-4 w-4" />

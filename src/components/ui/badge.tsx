@@ -7,14 +7,14 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: 'border-transparent bg-[var(--app-primary)] text-white',
-        neutral: 'border-transparent bg-[rgba(19,40,34,0.06)] text-[var(--app-muted-strong)]',
-        outline: 'border-[var(--app-border)] bg-white/75 text-[var(--app-muted-strong)]',
-        teal: 'border-transparent bg-[rgba(31,122,89,0.1)] text-[var(--app-primary-strong)]',
-        amber: 'border-transparent bg-[rgba(191,128,28,0.16)] text-[#8b5d0d]',
-        sky: 'border-transparent bg-[rgba(54,110,176,0.14)] text-[#24598f]',
-        violet: 'border-transparent bg-[rgba(117,88,183,0.14)] text-[#5e43a4]',
-        rose: 'border-transparent bg-[rgba(178,66,96,0.14)] text-[#9f2d50]',
+        default: 'border-transparent bg-[var(--app-primary)] text-[#08131a]',
+        neutral: 'border-transparent bg-[rgba(64,62,67,0.58)] text-[var(--app-muted-strong)]',
+        outline: 'border-[var(--app-border)] bg-[var(--app-surface-soft)] text-[var(--app-muted-strong)]',
+        teal: 'border-transparent bg-[var(--app-primary-soft)] text-[var(--app-primary)]',
+        amber: 'border-transparent bg-[rgba(191,128,28,0.22)] text-[#ffd48a]',
+        sky: 'border-transparent bg-[rgba(30,174,219,0.16)] text-[#7edfff]',
+        violet: 'border-transparent bg-[rgba(117,88,183,0.2)] text-[#ccb8ff]',
+        rose: 'border-transparent bg-[rgba(178,66,96,0.2)] text-[#ffb8cf]',
       },
     },
     defaultVariants: {
