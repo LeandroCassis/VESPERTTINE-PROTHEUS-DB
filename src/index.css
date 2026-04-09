@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --app-background: #f6f7f2;
+  --app-surface: #ffffff;
+  --app-surface-soft: rgba(255, 255, 255, 0.82);
+  --app-panel: #eef3ee;
+  --app-ink: #132822;
+  --app-muted: #6d837c;
+  --app-muted-strong: #425c54;
+  --app-border: rgba(19, 40, 34, 0.08);
+  --app-primary: #1f7a59;
+  --app-primary-strong: #19694d;
+  --app-primary-soft: rgba(31, 122, 89, 0.1);
+  --app-accent: #f0d9ab;
+  --app-shadow: 0 22px 55px -35px rgba(15, 23, 42, 0.35);
+  --app-shadow-soft: 0 16px 38px -28px rgba(15, 23, 42, 0.2);
+  --app-radius-xxl: 12px;
+  --app-radius-xl: 10px;
+  --app-radius-lg: 8px;
+  --app-radius-md: 6px;
+  --app-radius-sm: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--app-ink);
+  font-family: 'Manrope', 'Segoe UI Variable Text', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(183, 221, 203, 0.44), transparent 26%),
+    radial-gradient(circle at top right, rgba(248, 224, 183, 0.38), transparent 22%),
+    linear-gradient(180deg, #fcfcf8 0%, var(--app-background) 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: rgba(31, 122, 89, 0.18);
+  color: var(--app-ink);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(102, 128, 118, 0.32);
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(80, 103, 95, 0.48);
+  background-clip: content-box;
+}
+
+[class*='rounded-[28px]'] {
+  border-radius: var(--app-radius-xxl);
+}
+
+[class*='rounded-[24px]'] {
+  border-radius: var(--app-radius-xl);
+}
+
+[class*='rounded-[22px]'] {
+  border-radius: var(--app-radius-lg);
+}
+
+[class*='rounded-[20px]'] {
+  border-radius: var(--app-radius-md);
+}
+
+[class*='rounded-[18px]'] {
+  border-radius: var(--app-radius-sm);
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.reveal {
+  animation: rise-in 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.24s;
+}
